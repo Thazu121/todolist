@@ -8,6 +8,7 @@ btn.addEventListener("click", (event) => {
         alert("Enter a Task")
         return
     }
+    
 
     let li = document.createElement("li")
     let p = document.createElement("span")
@@ -17,10 +18,10 @@ btn.addEventListener("click", (event) => {
     list.appendChild(li)
 
 
-    const a = document.createElement("div")
+    const action = document.createElement("div")
     const edit = document.createElement("button")
     edit.textContent = "EDIT"
-    a.appendChild(edit)
+    action.appendChild(edit)
 
     edit.addEventListener("click", (e) => {
         if (edit.textContent === "EDIT") {
@@ -37,15 +38,22 @@ btn.addEventListener("click", (event) => {
     const del = document.createElement("button")
     del.textContent = "DELETE"
     del.id = "del"
-    a.appendChild(del)
+    action.appendChild(del)
     del.addEventListener("click", () => {
         li.remove()
     })
-    li.appendChild(a)
+    li.appendChild(action)
 
-    p.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') { btn.click() }
-})
+p.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        p.contentEditable = "false";
+        edit.innerText = "Edit";
+    }
+
+});
+
+
 })
 
 
