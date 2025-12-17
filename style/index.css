@@ -70,6 +70,7 @@ h2{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     color: #1f2937;
     font-size: 14px;
     border-radius: 8px;
@@ -77,10 +78,28 @@ h2{
 }
 #list li div{
     display: flex;
-    gap:8px
+    gap:8px;
+    flex-wrap: wrap;
+
 }
 #list button{
     padding: 5px 10px ;
     border-radius: 4px;
     cursor: pointer;
+}
+@media (max-width: 400px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    #to input,
+    #to button {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+
+    #list li {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
 }
