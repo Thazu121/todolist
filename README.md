@@ -22,7 +22,6 @@ A simple and interactive To-Do List web application built with HTML, CSS, and Ja
 2. Open `index.html` in a web browser.
 3. Type a task in the input field and click **ADD**.
 4. Tasks will appear in the list below the input field.
-5. (Optional) Add functionality to mark tasks complete or delete them using JavaScript.
 
 ## File Structure
  project-folder/
