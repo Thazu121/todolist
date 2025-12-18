@@ -143,6 +143,7 @@ h2 {
         flex-direction: column;
         gap: 10px;
     }
+
     #to input,
     #to button {
         width: 100%; 
